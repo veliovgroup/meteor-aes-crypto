@@ -2,7 +2,7 @@ Isomorphic AES cipher
 =====
 Simplified isomorphic API for AES cipher by CryptoJS
 
-This implementation uses random salt for every encrypted value and CFB padding. This means if you even encrypt two times same value with same password the encrypted result will be both times different. So encrypted values bu this method is strong against rainbow tables and all other precomputed tables.
+This implementation uses random salt for every encrypted value and CFB padding. This means if you even encrypt two times same value with same password the encrypted result will be both times different. So encrypted values by this method is strong against rainbow tables and all other precomputed tables.
 
 # Installation
 ```shell
@@ -20,6 +20,7 @@ AESencrypt('My Plain String', 'TXkgUGxhaW4gU3RyaW5n');
 ```js
 AESdecrypt('{"ct":"ZQAp/MEV0pMDn6V7oY5YFVvEGNxvG2eJliNPZpT9U2I=","iv":"0e472d2cd20892ac9cfcf91dea4fe98e","s":"35e808ccc71b8c13"}', 'TXkgUGxhaW4gU3RyaW5n');
 // Returns: 'My Plain String'
+```
 
 #### Validate encrypted JSONable String
 To validate returned object from `AESencrypt` function use this regular expression:
