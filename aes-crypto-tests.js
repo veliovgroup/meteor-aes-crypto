@@ -1,3 +1,5 @@
+import { AESencrypt, AESdecrypt } from 'meteor/ostrio:aes-crypto';
+
 var res = '';
 Tinytest.add('AESencrypt()', function (test) {
   res = AESencrypt('My Plain String', 'TXkgUGxhaW4gU3RyaW5n');
