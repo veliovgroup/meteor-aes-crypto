@@ -22,14 +22,22 @@ import { AESencrypt, AESdecrypt } from 'meteor/ostrio:aes-crypto';
 
 ## API
 
-### `AESencrypt(plainString, password)`
+### Encrypt
+
+- `AESencrypt(value, password)`
+  - `value` {*String*}
+  - `password` {*String*}
 
 ```js
 AESencrypt('My Plain String', 'TXkgUGxhaW4gU3RyaW5n');
 // Returns: '{"ct":"ZQAp/MEV0pMDn6V7oY5YFVvEGNxvG2eJliNPZpT9U2I=","iv":"0e472d2cd20892ac9cfcf91dea4fe98e","s":"35e808ccc71b8c13"}'
 ```
 
-### `AESdecrypt(JSONableString, password)`
+### Decrypt
+
+- `AESdecrypt(value, password)`
+  - `value` {*String*} - In form of *JSONableString*
+  - `password` {*String*}
 
 ```js
 AESdecrypt('{"ct":"ZQAp/MEV0pMDn6V7oY5YFVvEGNxvG2eJliNPZpT9U2I=","iv":"0e472d2cd20892ac9cfcf91dea4fe98e","s":"35e808ccc71b8c13"}', 'TXkgUGxhaW4gU3RyaW5n');
